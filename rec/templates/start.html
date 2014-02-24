@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<title>Login</title>
+    <div class=hero-unit>
+	<h1> Cross Domain Recommendation System
+	<small><h6></h6></small></h1>
+    <br><br>
+	<div class=center>
+	<h3>Sign In</h3>
+    <table>
+	<form action="/" method=post>
+		{% csrf_token %}
+        <tr>
+    		<td>Username</td>
+            <td><input  name=user_name type=text></td>
+        </tr>
+        <tr>
+    		<td>Password</td>
+            <td><input  name=password type=password></td>
+        </tr>
+        <tr>
+            <td>
+    		<div class=error>
+	    		{% if  error  %}
+		    	<h6 style="color:red"><b>Username & Password doesn't match!</b></h6>
+			    {% endif %}
+    		</div>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+	    	<td><input type=submit Value=Login ></td>
+        </tr>
+        <tr>
+		
+
+            <td>
+	    		<a href=/login/forgot style=font-size:12px>Can't Access your account?</a>
+            </td>
+        </tr>
+        </table>
+		</form>
+
+	<h3><a href = "/signup/"> Sign Up</a></h3>
+
+         <h3><a href = "/ ">About us </a> </h3>
+
+	</div>
+	</div>
+{% endblock %}    
