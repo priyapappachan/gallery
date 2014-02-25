@@ -363,7 +363,7 @@ def movie (request, uId,mId):
 	#return HttpResponseRedirect('/%s/?e=1' % uId) #set url to /userid			
  	
 
-#done by jisa
+
 def profile(request,userId):
 	if request.method=='GET':
 		user=User.objects.get(id=userId)
