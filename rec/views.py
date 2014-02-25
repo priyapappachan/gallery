@@ -5,13 +5,14 @@ from django.template import loader, Context
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import render
 from django.db import models
-from rec.models import User, Movie, Mrate, Mtags
+from rec.models import User, Movie, Mrate, Mtags,Book,Brate
 from django.core.context_processors import csrf
 import urllib2
 from BeautifulSoup import BeautifulSoup
 from mechanize import Browser
 import re
 import psycopg2
+import random
 import sys
 from operator import itemgetter
 from itertools import groupby
@@ -48,6 +49,7 @@ def mrecommend(user):
 	return real_list
 
 
+
 def getunicode(soup):
 	body=''
   	if isinstance(soup, unicode):
@@ -62,6 +64,17 @@ def getunicode(soup):
     		for con in con_list:
      			body = body + getunicode(con)
   	return body
+
+def brecommend(user):
+	r1 = random.randint(1980,1981)
+	l = []
+	b0 = Book.objects.filter(book_year=r1)
+	b2 = []
+	r2 = random.randint(1990,1991)
+	b2.append(b0[0])
+	#b1 = Book.objects.get(book_year=r2)
+	b2.append(b0[1])
+	return b2
 
 def search(movie):
 			 
@@ -130,62 +143,177 @@ def signup(request): #sign up page. url/signup/
 		return HttpResponseRedirect('/%s' % new_user.id) #set url to home page /userid
 
 def initial(request,uId):
-	if request.method=='GET':
+	
+	
 		user = User.objects.get(id=uId)
-		return render_to_response('initial_rating.html',{'user':user},context_instance=RequestContext(request))#if get display page
-	else:
 		
-		user = User.objects.get(id=uId)
-		troy=request.POST.get('troy_rating')
-		nemo=request.POST.get('nemo_rating')
-		m = Movie.objects.get(movie_name ='Troy')
-		if troy >=0 :
-			new_rating = Mrate(user_id=user.id,movie_id=m.movie_id,rating=troy,wlist='y')
-			new_rating.save()
-		m = Movie.objects.get(movie_name ='Finding Nemo')
-		if nemo >=0 :
-		#new_rating = Mrate(user_id=user.id,movie_id=m.movie_id,rating=troy,wlist='y')
-			new_rating = Mrate(user_id=user.id,movie_id=m.movie_id,rating=nemo,wlist='y')
-			new_rating.save()
-		user = User.objects.get(id=uId)
-		return HttpResponseRedirect('/%s/home/' % user.id)
-
+		
+	
+		movs = []
+		for i in range(8,11):
+			
+			obj = Movie.objects.get(id = i )
+			movs.append(obj)
+		boks = []
+		#for i in range(8,11):
+			
+		obj = Book.objects.get(book_name = 'My Son, My Son' )
+		boks.append(obj)
+		obj = Book.objects.get(book_name = 'On the Road' )
+		boks.append(obj)
+		obj = Book.objects.get(book_name = 'Bahama Crisis')
+		boks.append(obj)
+		if request.method=='GET':
+			return render_to_response('initial_rating.html',{'user':user, 'movies' : movs,'books':boks},context_instance=RequestContext(request))#if get display page
+		else:
+		
+				choices = request.POST.getlist('rates')
+				i = 0
+				for mv in movs:
+					print mv.movie_name
+					m = Movie.objects.get(movie_name =mv.movie_name)
+					
+					new_rating = Mrate(user_id = user.id,movie_id=m.id,rating=choices[i],wlist='y')
+					new_rating.save()
+					i = i + 1
+				#print ratng
+				choices = request.POST.getlist('books')
+				i=0
+				#for bk in boks:
+				#	print bk.book_name
+				#	b = Book.objects.get(book_name =bk.book_name)
+				#	
+				#	new_rating = Brate(user_id = user.id,isbn=b.isbn,rating=choices[i])
+				#	new_rating.save()
+				#	i = i + 1
+				return HttpResponseRedirect('/%s/home/' % user.id)
 
 def home(request,uId): #home page pass user id to ths page
+ if request.method == 'GET':
+		
 	if  'e' in request.GET:
 		code = 1
 	else:
 		code = None
 	user = User.objects.get(id=uId) #get user data to an object
-	#real_list = mrecommend(user)
-	
+	real_list = mrecommend(user)
+	l = brecommend(user)
+	#real_list=[]
+	mov_obj = []
+	for rec in real_list:
+		try:		
+			obj = Movie.objects.get(id = rec[0])
+			
+		except Movie.DoesNotExist:
+			obj = None
+		if obj != None :
+			
+			mov_obj.append(obj)
+	book_obj = l
 	all_models_dict = { #rec val
 			"user" : user,
-			'error' : code,
-			"extra_context" : {"movie1" :Movie.objects.get(id=11),
-	                 	          "movie2": Movie.objects.get(id=22),
-					   "movie3": Movie.objects.get(id=33),
-	                	           }
+			"error" : code,
+			"recs" : mov_obj,
+			"recs1":book_obj
     			}
 	return render_to_response('home.html',all_models_dict,context_instance=RequestContext(request)) #display home page with dictionary context 														instance
+ else:
+	name=request.POST.get('b')
+	if name == None :
+		name=request.POST.get('q')
+		user = User.objects.get(id=uId)
+		movie = Movie.objects.get(movie_name__iexact = name)
+		return HttpResponseRedirect('/%s/movie/%s' % (user.id,movie.id))
+	else :
+		user = User.objects.get(id=uId)
+		book = Book.objects.get(book_name__iexact = name)
+		return HttpResponseRedirect('/%s/book/%s' % (user.id,book.isbn))
+def movieRec(request, uId):
+	user=User.objects.get(id=uId)
+	real_list = mrecommend(user)
+	mov_obj = []
+	for rec in real_list:
+		try:		
+			obj = Movie.objects.get(id = rec[0])
+			
+		except Movie.DoesNotExist:
+			obj = None
+		if obj != None :
+			try:
+				o = Mrate.objects.get(movie_id = obj.id,user_id = user.id)
+			except Mrate.DoesNotExist:
+				o = None
+			if o==None:
+				mov_obj.append(obj)
+			
+	return render_to_response('movierec.html',{'user' : user, 'recs' : mov_obj},context_instance=RequestContext(request))
 
-def movie (request, uId):
-	if 'q' in request.GET:
- 		 movie_input = request.GET['q']
+def book(request,uId,bId):
+	if request.method == 'GET':
+		book_input = Book.objects.get(isbn = bId)
+		user = User.objects.get(id=uId)
+		try:
+			book = Book.objects.get(book_name__iexact = book_input.book_name)
+		except Book.DoesNotExist:
+			book = None
+		if book != None :
+			 try: 
+			
+			 	book_rate = Brate.objects.get(user_id = user.id, isbn = book.isbn)	
+			 except Brate.DoesNotExist:
+				book_rate = None
+			 if book_rate != None:
+		 	 	rated_row = Brate.objects.get(user_id = user.id,isbn = book.isbn)
+		 	 	return render_to_response('bookdetails.html',{'Book':book,'rated_row':rated_row},context_instance=RequestContext(request))
+			 else: 
+			
+				return render_to_response('bookdetails_rate.html',{'Book':book,'user':user,'bobj':book_input},context_instance=RequestContext(request))
+			
+		else:
+			return render_to_response('no_book.html',context_instance=RequestContext(request))		 
+		
+	else:
+			book = Book.objects.get(isbn = bId)
+			
+			user = User.objects.get(id=uId)
+			
+			
+			select = request.POST.get('wlist')
+			if select == '1':
+				user_rating = request.POST.get('r')
+				myBook = Brate.objects.latest('id')
+				val = myBook.id + 1
+				o1 = Brate(id = val,user_id = user.id,isbn = book.isbn,rating=user_rating,wlist = 'y')
+				o1.save()
+			elif select == '2':
+				myBook = Brate.objects.latest('id')
+				val = myBook.id + 1
+				o1 = Brate(id = val,user_id = user.id,isbn=book.isbn,rating='0',wlist = 'n')
+				o1.save()
+			return HttpResponseRedirect('/%s/home/' % user.id)
+			
+			
+
+def movie (request, uId,mId):
+	
+	if request.method == 'GET':
+		 movie_input = Movie.objects.get(id = mId)
 		 info = {}
 		 try: 
-		 	movie = Movie.objects.get(movie_name__iexact = movie_input)	
+		 	movie = Movie.objects.get(movie_name__iexact = movie_input.movie_name)	
 		 except Movie.DoesNotExist:
 			movie = None
 		 if movie != None :
 			 if movie.description == 'null':
- 		 		info = search(movie_input)
+ 		 		info = search(movie_input.movie_name)
+				info['genre'] = movie.genre
 				movie.description = info['description']
 				movie.save()
 				movie.release_date = info['date']
 				movie.save()
 				movie.imdb_rating = info['rating']
 				movie.save()
+				
 				
 			 else:
 				
@@ -197,7 +325,7 @@ def movie (request, uId):
 				
 		 else:
 			
-			info = search(movie_input)
+			info = search(movie_input.movie_name)
 			movie = Movie(movie_name = movie_input,genre = info['genre'],description = info['description'],release_date = info['date'], imdb_rating = info['rating'])
 			movie.save()
 							
@@ -210,33 +338,69 @@ def movie (request, uId):
 		 except Mrate.DoesNotExist:
 			movie_rate = None
 		 if movie_rate != None:
-			rated_row = Mrate.objects.get(user_id = user.id,movie_id = movie.id)
-			return render_to_response('moviedetails.html',{'Movie':info,'rated_row':rated_row},context_instance=RequestContext(request))
+		 	rated_row = Mrate.objects.get(user_id = user.id,movie_id = movie.id)
+		 	return render_to_response('moviedetails.html',{'Movie':info,'rated_row':rated_row},context_instance=RequestContext(request))
 		 else: 
-			return render_to_response('moviedetails_rate.html',{'Movie':info,'user':user},context_instance=RequestContext(request))
+			
+			return render_to_response('moviedetails_rate.html',{'Movie':info,'user':user,'mobj':movie_input},context_instance=RequestContext(request))
 	else:
+			movie = Movie.objects.get(id = mId)
+			print movie.movie_name
+			
 			user = User.objects.get(id=uId)
 			
-			user_rating = request.POST.get('r')
+			
 			select = request.POST.get('wlist')
 			if select == '1':
-				o1 = Mrate(user_id = user.id,movie_id=111,rating=user_rating,wlist = 'y')
+				user_rating = request.POST.get('r')
+				o1 = Mrate(user_id = user.id,movie_id=movie.id,rating=user_rating,wlist = 'y')
 				o1.save()
 			if select == '2':
-				o1 = Mrate(user_id = user.id,movie_id=movie.id,rating = 0,wlist = 'n')
-				o1.save()			
+				o1 = Mrate(user_id = user.id,movie_id=movie.id,rating=0,wlist = 'n')
+				o1.save()
 			return HttpResponseRedirect('/%s/home/' % user.id)
-	
+			
 	#return HttpResponseRedirect('/%s/?e=1' % uId) #set url to /userid			
  	
 
 #done by jisa
-def change_password(request):
-	#user = User.objects.get(user_password=request.POST.get('old_password')
-	#user.user_password=request.POST.get('new_password')
-	#user.save()
-	User.objects.filter(user_password=request.POST.get('old_password')).update(user_password=request.POST.get('new_password'))
-	#cant save
-	return HttpResponseRedirect(profile.html)
-				 
+def profile(request,userId):
+	if request.method=='GET':
+		user=User.objects.get(id=userId)
+		watched_movies=Mrate.objects.filter(user_id = user.id, wlist = 'y')
 		
+		lst = []
+		for movies in watched_movies:
+			obj = Movie.objects.get(id = movies.movie_id)
+			lst.append(obj)
+					
+		return render_to_response('profile.html',
+					{'current_user':user, 'movies':lst},context_instance=RequestContext(request))
+	else:
+		return render_to_response('changepassword.html',{'usersId':usersId},RequestContext(request)) #if get display page
+		
+def changepassword(request,usersId):
+	if request.method=='GET':
+		return render_to_response('changepassword.html',{'usersId':usersId},RequestContext(request)) #if get display page
+	else:
+			
+		user = User.objects.get(id=usersId)
+		if user.user_password == request.POST.get('old_password'):
+			new = request.POST.get('new_password')
+			update_user=User(id= user.id,user_name=user.user_name,  user_password=new, mail_id=user.mail_id, phonenumber=user.phonenumber)
+			update_user.save()
+			return HttpResponseRedirect('/confirm/%s' % usersId) #set url to home page /userid
+		else :
+			return render_to_response('changepassword.html',{'usersId':usersId},RequestContext(request)) #if get display page
+			
+
+def confirm(request,usersId):
+	if request.method =='GET':
+		return render_to_response('confirm.html',{'usersId':usersId},RequestContext(request)) #if get display page
+	else:
+		return HttpResponseRedirect('/%s' % usersId) #set url to home page /userid
+			
+			
+				 
+	
+
