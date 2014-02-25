@@ -25,5 +25,17 @@ class Mtags(models.Model):
 	tags = models.CharField(max_length=400)
 	tag_id = models.IntegerField(primary_key=True)
 
-	
+class Book(models.Model):
+	isbn = models.CharField(max_length=25,primary_key=True)
+	book_name = models.CharField(max_length=300)
+	book_author = models.CharField(max_length=100)
+	book_year = models.IntegerField()
+	book_publisher = models.CharField(max_length=200)
+	book_image  = models.CharField(max_length=300)
+
+class Brate(models.Model):
+	user_id = models.IntegerField()
+	isbn = models.CharField(max_length=25)
+	rating = models.IntegerField()
+	wlist = models.CharField(max_length=10, default='y')
 	
