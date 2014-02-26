@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %} Welcome Note {% endblock %}
+
+{% block content %}
+<fieldset>
+
+<legend><h1 style="color:olive">{{Book.book_name}}</h1></legend>
+<p> ISBN:  <strong>{{ Book.isbn }}</strong>
+<br> Author :  <strong>{{ Book.book_author }}</strong> </br>
+
+<br> Publisher :  <strong>{{ Book.book_publisher }}</strong> </br>
+
+<br> Year Published :  <strong>{{ Book.book_year }}</strong> </br>
+
+
+
+
+</p>
+
+<br> Rating given :  <strong> {{ rated_row.rating }} </strong> </br>
+
+</fieldset>
+
+{% endblock content %}
+<!--
+<div> <img src = "{{Movie.img}}"+".jpg" /> 
+</div>
