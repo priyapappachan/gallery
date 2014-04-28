@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %} Welcome Note {% endblock %}
+
+{% block content %}
+<h1> Rate movies </h1>
+<fieldset>
+<legend><h1 style="color:olive">{{user.user_name}}</h1></legend>
+
+<form action="/{{user.id}}/movie/" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+
+    </form>
+
+<form action="/{{user.id}}/" method="post" accept-charset="utf-8">{% csrf_token %} 
+<h3 style="color:green"> Have you seen these movies? Rate it now (Rating out of 10. Give 0 rating if not seen) </h3>
+{% for movie in movies %} 
+<h4> <label for = "movie">{{movie.movie_name}} </label>
+<input type="number" name="rates" value="{{movie.movie_name}}" > </h4>
+</br>
+{% endfor %}
+{% for book in books %} 
+<h4> <label for = "book">{{book.book_name}} </label>
+<input type="number" name="books"  > </h4>
+</br>
+{% endfor %}
+<div>
+<input type="submit" value="Done" />
+</div>
+
+</form>
+</fieldset>
+</br> Organised by 
+</p>
+
+
+{% endblock content %}

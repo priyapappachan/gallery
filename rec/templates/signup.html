@@ -1,0 +1,47 @@
+
+<html>
+<head>
+</head>
+<body>
+<form name="login" action="/signup/" method="post" accept-charset="utf-8">{% csrf_token %}
+
+<fieldset>
+<legend>
+<h1 style="color:lightseagreen;">Sign up</h1></legend>
+</br>
+
+<div>
+<label for="username">Username:</label><br>
+<input type="text" name="username" value="" maxlength="100" /><br>
+</div>
+</br>
+
+<div>
+<label for="password">Password:</label><br>
+<input type="password" name="password" value="" maxlength="100" /><br>
+</div>
+</br>
+
+<div>
+<label for="no">Mail id </label><br>
+<input type="email" name="mail" value="" maxlength="100" /><br>
+</div>
+</br>
+
+<div>
+<label for="no">Phone number </label><br>
+<input type="text" name="number" value="" maxlength="100" /><br>
+</div>
+</br>
+
+
+
+<div>
+</br>
+<div>
+<input type="submit" value="Done" />
+</div>
+</fieldset>
+</form>
+</body>
+</html>

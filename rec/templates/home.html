@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} Welcome Note {% endblock %}
+
+{% block content %}
+<fieldset>
+<legend><h1 style="color:olive">{{user.user_name}}</h1></legend>
+
+<label style="float:right"><a href = "/profile/{{user.id}}"> Profile</a></label>
+
+
+<form action="/{{user.id}}/home/" method="post" accept-charset="utf-8">{% csrf_token %}
+        <input type="text" name="q">
+        <input type="submit" value="Search movie">
+<div class=error>
+	    		{% if error  %}
+		    	<h6 style="color:red"><b>Please enter another movie!</b></h6>
+			    {% endif %}
+    		</div>
+    </form>
+
+<form action="/{{user.id}}/home/" method="post">{% csrf_token %}
+        <input type="text" name="b">
+        <input type="submit" value="Search book">
+<div> <a href ="/{{user.id}}/movie/Recommend/" > Movie Recommendations </a> </div>
+
+{% for rec in recs %} 
+{% if forloop.counter < 4 %} 
+<p> <h3> <a href="/{{user.id}}/movie/{{rec.id}}/"><strong>  {{rec.movie_name}} </strong> </a> </h3>
+ </p>
+{% endif %}
+{% endfor %}
+<h4>Book Recommendations</h4>
+{% for rec1 in recs1 %}
+ <p> <h3> <a href="/{{user.id}}/book/{{rec1.isbn}}/"><strong>  {{rec1.book_name}} </strong> </a> </h3>
+ </p>
+{% endfor %}
+</br> Organised by 
+
+</fieldset>
+{% endblock content %}
