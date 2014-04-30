@@ -12,6 +12,9 @@ Blog::Application.routes.draw do
   root 'welcome#indez'
 end
   
+resources :articles do
+  resources :comments
+end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
