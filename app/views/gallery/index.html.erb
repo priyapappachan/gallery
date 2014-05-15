@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Image</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+<% @photos.each do |photo| %>
+  <tr>
+    <td><%= photo.title %></td>
+    <td><%= photo.image_file %></td>
+    <td><%= link_to 'Show', photo_path(photo) %></td>
+    
+    <td><%= link_to 'Destroy', photo_path(photo),
+                    method: :delete, data: { confirm: 'Are you sure?'} %></td>
+  </tr>
+<% end %>
+</table>

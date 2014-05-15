@@ -1,0 +1,13 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Image</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+<% @photos.each do |photo| %>
+  <tr>
+    
+  </tr>
+<% end %>
+</table>
