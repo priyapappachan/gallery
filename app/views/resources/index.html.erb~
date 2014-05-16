@@ -1,0 +1,32 @@
+<h1>Listing resources</h1>
+
+<h1> Tags </h1>
+<% @resources.each do |resource| %> 
+	 <%= raw resource.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
+<% end %>
+
+</br></br>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @resources.each do |resource| %>
+      <td>
+	<tr>
+       
+	<%= link_to image_tag (resource.pic.url(:thumb)) , "/resources/#{resource.id}"%> 
+        
+ 	</tr>
+
+	<tr>      </tr>
+        <tr><%= link_to 'Show', resource %></tr>
+        <tr><%= link_to 'Edit', edit_resource_path(resource) %></tr>
+        <tr><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></tr>
+      </td>
+    <% end %>
+  </tbody>
+</table>
