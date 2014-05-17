@@ -1,4 +1,0 @@
-include ActsAsTaggableOn::TagsHelper
-module ResourcesHelper
-	
-end
