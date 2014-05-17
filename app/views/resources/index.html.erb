@@ -1,0 +1,20 @@
+<head>
+<%= stylesheet_link_tag "mystyle.css" %>
+ 
+</head>
+
+<h1>Images</h1>
+
+<h4> Tags </h4>
+<% @resources.each do |resource| %> 
+	 <%= raw resource.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
+<% end %>
+</br></br></br></br></br>
+
+<div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+  <% @resources.each do |resource| %>
+    <%= link_to image_tag(resource.pic.url(:medium)), resource %> 
+  <% end %>
+</div>
+
+
