@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'paperclip', '~> 3.0'
 gem 'bootstrap-addons-rails'
 gem 'acts-as-taggable-on'
-gem 'twitter-bootstrap-rails', group: :assets
+gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem "less-rails"
 # Use jquery as the JavaScript library
