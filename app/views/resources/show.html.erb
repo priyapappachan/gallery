@@ -1,11 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<b>Tags :   </b>
+<%= raw @resource.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
 
 <%= image_tag @resource.pic.url %>
  <br/>
 
-
-<%= raw @resource.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
 
 <%= link_to 'Edit', edit_resource_path(@resource) %> |
 <%= link_to 'Back', resources_path %>
