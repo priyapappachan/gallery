@@ -2,21 +2,14 @@ class ResourcesController < ApplicationController
   before_action :set_resource, only: [:show, :edit, :update, :destroy]
 
   
-
-  # GET /resources
-  # GET /resources.json
   def index
     if params[:tag]
      @resources = Resource.tagged_with(params[:tag])
     else
      @resources = Resource.all
-    end
-    
-    
+    end    
   end
 
-  # GET /resources/1
-  # GET /resources/1.json
   def show
 	@resource = Resource.find(params[:id])
   end
@@ -30,8 +23,6 @@ class ResourcesController < ApplicationController
   def edit
   end
 
-  # resource /resources
-  # resource /resources.json
   def create
     @resource = Resource.new(resource_params)
     
@@ -43,6 +34,7 @@ class ResourcesController < ApplicationController
     
   end
 
+#for tags
  def tagged
   if params[:tag].present? 
     @resources = Resource.tagged_with(params[:tag])
@@ -66,7 +58,6 @@ class ResourcesController < ApplicationController
   end
 
   # DELETE /resources/1
-  # DELETE /resources/1.json
   def destroy
     @resource.destroy
     respond_to do |format|
@@ -76,12 +67,10 @@ class ResourcesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_resource
       @resource = Resource.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
       params.require(:resource).permit(:tag_list,:pic,:name)
     end

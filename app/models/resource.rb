@@ -7,6 +7,8 @@ class Resource < ActiveRecord::Base
   has_many :tags, through: :taggings
   has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
+# for tags
+
   def self.tagged_with(name)
     Tag.find_by_name!(name).resources
   end

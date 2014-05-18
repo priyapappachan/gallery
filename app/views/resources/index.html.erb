@@ -1,40 +1,27 @@
-
 <html>
 <head>
 <style>
-
 h1
 {
 text-shadow: 5px 5px 5px #FAEBD7;
 }
-a:link {color:#FA8072;}    /* unvisited link */
-a:visited {color:#000080;} /* visited link */
-a:hover {color:#800000;}   /* mouse over link */
-a:active {color:#BC8F8F;}  /* selected link */
- body{
-padding-left: 1em;
-padding-right:5em;
-font-family: Georgia, "Abecedario",Times, serif;
-color: sienna;
-
-
+body{
+ padding-left: 1em;
+ padding-right:5em;
+ font-family: Georgia, "Abecedario",Times, serif;
+ color: sienna;
 }
 
-a:visited {
-  color: maroon }
 p.ex2
 {
-font:italic bold 12px/30px Georgia,serif;
+ font:italic bold 12px/30px Georgia,serif;
 }
 
 </style>
- <div align="right"> <%= link_to "Upload new image", new_resource_path %> </div>
-
+<div align="right"> <%= link_to "Upload new image", new_resource_path %> </div>
 </head>
 
-
 <h1>Images</h1>
-
 
 <h4> Tags </h4>
 <% @resources.each do |resource| %> 

@@ -4,9 +4,11 @@ class TagsController < ApplicationController
     @tag = @resource.tags.create(tag_params)
     redirect_to resource_path(@resource)
  end
+
   def new
     @tag = Tag.new
   end
+
  def tagged
   if params[:tag].present? 
     @resources = Resource.tagged_with(params[:tag])
@@ -14,6 +16,7 @@ class TagsController < ApplicationController
     @resources = Resource.resourceall
   end  
  end
+
  def index
     if params[:tag]
      @resources = Resource.tagged_with(params[:tag])
