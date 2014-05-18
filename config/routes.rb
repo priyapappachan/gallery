@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
+
   get 'welcome/index'
 
    
@@ -12,21 +12,14 @@ Rails.application.routes.draw do
   
   resources :resources ,:tags
  
-=======
-  resources :resources #only: [:create, :destroy, :tag]
 
->>>>>>> a5cf997ebe55804986943c4295f443dd635a5183
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-<<<<<<< HEAD
+
    
-   
-=======
-   root 'welcome#index'
-   get 'tags/:tag', to: 'resources#index', as: :tag
->>>>>>> a5cf997ebe55804986943c4295f443dd635a5183
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
@@ -76,9 +69,4 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> a5cf997ebe55804986943c4295f443dd635a5183

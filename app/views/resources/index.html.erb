@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <html>
 <head>
 <style>
@@ -32,15 +32,10 @@ font:italic bold 12px/30px Georgia,serif;
 
 </head>
 
-=======
-<head>
-<%= stylesheet_link_tag "mystyle.css" %>
- 
-</head>
 
 <h1>Images</h1>
 
->>>>>>> a5cf997ebe55804986943c4295f443dd635a5183
+
 <h4> Tags </h4>
 <% @resources.each do |resource| %> 
 	 <%= raw resource.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>

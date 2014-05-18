@@ -2,7 +2,7 @@ class Tag < ActiveRecord::Base
 	#attr_accessible :name
   	has_many :taggings
   	has_many :resources, through: :taggings
-<<<<<<< HEAD
+
 
   def self.tagged_with(name)
     Tag.find_by_name!(name).resources
@@ -24,6 +24,4 @@ class Tag < ActiveRecord::Base
   end
 end
 
-=======
-end
->>>>>>> a5cf997ebe55804986943c4295f443dd635a5183
+

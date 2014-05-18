@@ -14182,3 +14182,900 @@ SyntaxError (/home/priya/gallery_sample/app/views/resources/index.html.erb:30: s
   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
   Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-05-18 13:00:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ResourcesController#index as HTML
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from <class:Resource> at /home/priya/gallery/app/models/resource.rb:8)
+  Rendered resources/index.html.erb within layouts/application (88.6ms)
+Completed 500 Internal Server Error in 136ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( mystyle.css )` to `config/initializers/assets.rb` and restart your server):
+    34: 
+    35: =======
+    36: <head>
+    37: <%= stylesheet_link_tag "mystyle.css" %>
+    38:  
+    39: </head>
+    40: 
+  app/views/resources/index.html.erb:37:in `_app_views_resources_index_html_erb___2640189134560725896_25171340'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (206.5ms)
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-05-18 13:02:59 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.6ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (38.0ms)
+Completed 500 Internal Server Error in 41ms
+
+SyntaxError (/home/priya/gallery/app/models/tag.rb:5: syntax error, unexpected tLSHFT, expecting keyword_end
+<<<<<<< HEAD
+  ^
+/home/priya/gallery/app/models/tag.rb:27: syntax error, unexpected tEQQ, expecting $end
+=======
+   ^):
+  app/views/resources/index.html.erb:41:in `block in _app_views_resources_index_html_erb___2640189134560725896_26747380'
+  app/views/resources/index.html.erb:40:in `_app_views_resources_index_html_erb___2640189134560725896_26747380'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (134.7ms)
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-05-18 13:03:30 +0530
+Processing by ResourcesController#index as HTML
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from <class:Resource> at /home/priya/gallery/app/models/resource.rb:8)
+  [1m[36mResource Load (0.5ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 2]]
+  Rendered resources/index.html.erb within layouts/application (84.1ms)
+Completed 200 OK in 1128ms (Views: 1115.7ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-18 13:03:31 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (34.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.8ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 2]]
+  Rendered resources/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-18 13:03:33 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+Processing by ResourcesController#new as HTML
+  Rendered resources/new.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-18 13:03:34 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.9ms)
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+Processing by ResourcesController#new as HTML
+  Rendered resources/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-18 13:04:16 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.6ms)
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-18 13:04:31 +0530
+Processing by ResourcesController#new as HTML
+  Rendered resources/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:31 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:31 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:31 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:31 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:32 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:32 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:32 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:32 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:32 +0530
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+Processing by TagsController#index as HTML
+  [1m[36mResource Load (0.5ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 2]]
+  Rendered tags/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:34 +0530
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+Processing by ResourcesController#new as HTML
+  Rendered resources/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:36 +0530
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.5ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 2]]
+  Rendered resources/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:37 +0530
+
+
+Started GET "/tags/friends" for 127.0.0.1 at 2014-05-18 13:04:43 +0530
+Processing by ResourcesController#index as HTML
+  Parameters: {"tag"=>"friends"}
+  [1m[36mTag Load (1.0ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'friends' LIMIT 1[0m
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources" INNER JOIN "taggings" ON "resources"."id" = "taggings"."resource_id" WHERE "taggings"."tag_id" = $1  [["tag_id", 1]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 2]]
+  Rendered resources/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 47ms (Views: 7.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:43 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:43 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:44 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:44 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:44 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:44 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:44 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:44 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:44 +0530
+
+
+Started GET "/resources/2" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mResource Load (33.3ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 2]]
+  Rendered resources/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 45ms (Views: 8.7ms | ActiveRecord: 33.6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:04:46 +0530
+
+
+Started GET "/resources/2" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 2]]
+  Rendered resources/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-18 13:05:30 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.0ms)
+
+
+Started GET "/resources/2" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mResource Load (0.2ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 2]]
+  Rendered resources/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-18 13:05:41 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.1ms)
+
+
+Started GET "/resources/2" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 2]]
+  Rendered resources/show.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:05:59 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-18 13:06:00 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.6ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 2]]
+  Rendered resources/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-18 13:06:08 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.1ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+Processing by ResourcesController#index as HTML
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 2]]
+  Rendered resources/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-18 13:06:22 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.0ms)
