@@ -1,0 +1,24 @@
+<%= form_for :resource, :html => { :multipart => true } do |f| %>
+  <% if @resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@resource.errors.count, "error") %> prohibited this resource from being saved:</h2>
+
+      <ul>
+      <% @resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <p>
+     <b> Picture </b><br/>
+     <%= f.file_field :pic %>
+ </p>
+<p>
+	<%= f.label :tags, "Tags (separated by commas)" %><br />
+	<%= f.text_field :tag_list %>
+</p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

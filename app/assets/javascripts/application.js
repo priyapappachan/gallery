@@ -12,7 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+<<<<<<< HEAD
 = require twitter/bootstrap
+=======
+>>>>>>> a5cf997ebe55804986943c4295f443dd635a5183
 //= require turbolinks
 //= require_tree .
 = require bootstrap/gallery
