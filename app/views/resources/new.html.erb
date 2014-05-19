@@ -13,7 +13,17 @@ color: sienna;
 <h1>New image</h1>
 
 <%= form_for :resource ,url: "/resources/", :html => { :multipart => true } do |f| %>
-
+  <% if @resource.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@resource.errors.count, "error") %> prohibited
+      this image from being saved:</h2>
+    <ul>
+    <% @resource.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
 
 <div class="control-group">
 
