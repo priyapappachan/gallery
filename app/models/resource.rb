@@ -6,7 +6,8 @@ class Resource < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
   has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }
-
+  belongs_to :user
+  validate :pic
 # for tags
 
   def self.tagged_with(name)
