@@ -1,6 +1,6 @@
 
 <html>
-<div align="right"> <%= link_to 'Edit', edit_resource_path(@resource) %> | <%= link_to 'Back', resources_path %> | <%= link_to 'Delete', resource_path(@resource), method: :delete, data: { confirm: 'Are you sure?' } %>
+<div align="right">  <%= link_to 'Back', resources_path %> | <%= link_to 'Delete', resource_path(@resource), method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
 
 <p id="notice"><%= notice %></p>
@@ -8,7 +8,7 @@
 <b>Tags :   </b>
 <%= raw @resource.tags.map(&:name).map { |t| link_to t, tag_path(t) }.join(', ') %>
 
-<%= link_to 'Add tag', edit_resource_path(@resource) %> 
+
 <%= image_tag @resource.pic.url %>
 <br/>
 

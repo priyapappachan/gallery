@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
+  
+  
+
   get 'welcome/index'
 
    
  
   #resources :resources
  
-  root 'welcome#index'
+  root 'resources#index'
   get 'tags/:tag', to: 'resources#index', as: :tag
 
   
