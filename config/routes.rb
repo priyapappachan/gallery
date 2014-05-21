@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
-
   
-  
-
+  devise_for :users
   get 'welcome/index'
 
-   
+  resources :users
  
   #resources :resources
  
-  root 'resources#index'
+  root :to => 'welcome#index'
   get 'tags/:tag', to: 'resources#index', as: :tag
 
   

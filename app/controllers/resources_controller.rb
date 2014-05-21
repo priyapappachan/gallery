@@ -12,6 +12,7 @@ class ResourcesController < ApplicationController
 
   def show
 	@resource = Resource.find(params[:id])
+        
   end
 
   # GET /resources/new
@@ -27,7 +28,8 @@ class ResourcesController < ApplicationController
     @resource = Resource.new(resource_params)
     
     if @resource.save
-	redirect_to @resource
+    
+	redirect_to @resource 
     else
  	render 'new'
     end
