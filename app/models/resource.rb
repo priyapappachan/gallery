@@ -6,7 +6,7 @@ class Resource < ActiveRecord::Base
   has_many :taggings
   has_many :tags, through: :taggings
   has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }
-  
+  has_many :comments
   validates :pic, presence: true
 # for tags
 

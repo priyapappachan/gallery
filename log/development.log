@@ -39555,3 +39555,958 @@ Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-22 09:32:12 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-22 09:32:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (11.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20140529134741)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (720.3ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "body" text, "resource_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (45.2ms)[0m  CREATE  INDEX  "index_comments_on_resource_id" ON "comments"  ("resource_id")
+  [1m[36mSQL (10.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140529134741"]]
+  [1m[35m (13.6ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 19:27:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Completed 401 Unauthorized in 125ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 19:27:24 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.0.4/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/devise-3.0.4/app/views/devise/sessions/new.html.erb within layouts/application (77.8ms)
+Completed 200 OK in 539ms (Views: 486.6ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-05-29 19:27:25 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 19:27:32 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fta6NBAsGMCP0ySeEXNhFQGmS9ZLwTnjAMtw1t1sqpA=", "user"=>{"email"=>"priyapappachan010@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (30.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'priyapappachan010@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.0ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["current_sign_in_at", "2014-05-29 13:57:33.022741"], ["last_sign_in_at", "2014-05-22 04:02:09.369556"], ["sign_in_count", 3], ["updated_at", "2014-05-29 13:57:33.024061"]]
+  [1m[36m (12.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 359ms (ActiveRecord: 55.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 19:27:33 +0530
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-29 19:27:36 +0530
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from <class:Resource> at /home/priya/gallery/app/models/resource.rb:8)
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "resources"
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 27ms (Views: 7.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-29 19:27:40 +0530
+Processing by ResourcesController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/new.html.erb within layouts/application (110.3ms)
+Completed 200 OK in 117ms (Views: 111.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-29 19:27:42 +0530
+Processing by ResourcesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-05-29 19:27:50 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x000000036bc1c0 @tempfile=#<File:/tmp/RackMultipart20140529-10415-1fu1pv6>, @original_filename="friends.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>""}, "commit"=>"Save Resource"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+WARNING: Can't mass-assign protected attributes for Resource: tag_list, pic
+	app/controllers/resources_controller.rb:28:in `create'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered resources/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 6.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:27:50 +0530
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-05-29 19:28:00 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x0000000319c2a8 @tempfile=#<File:/tmp/RackMultipart20140529-10415-1nyyi9l>, @original_filename="friends.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>""}, "commit"=>"Save Resource"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes for Resource: tag_list, pic
+	app/controllers/resources_controller.rb:28:in `create'
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered resources/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:28:00 +0530
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-05-29 19:28:13 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x00000003897648 @tempfile=#<File:/tmp/RackMultipart20140529-10415-1jkud4i>, @original_filename="gallery.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"gallery.png\"\r\nContent-Type: image/png\r\n">, "tag_list"=>""}, "commit"=>"Save Resource"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+WARNING: Can't mass-assign protected attributes for Resource: tag_list, pic
+	app/controllers/resources_controller.rb:28:in `create'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered resources/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:28:13 +0530
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-05-29 19:28:28 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x007f9f4c081950 @tempfile=#<File:/tmp/RackMultipart20140529-10415-n29a9h>, @original_filename="friends1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>"friends"}, "commit"=>"Save Resource"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes for Resource: tag_list, pic
+	app/controllers/resources_controller.rb:28:in `create'
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered resources/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 6.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:28:28 +0530
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-29 19:28:35 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  Rendered resources/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:28:35 +0530
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-29 19:28:38 +0530
+Processing by ResourcesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:28:39 +0530
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-05-29 19:28:46 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x007f9f44254fc8 @tempfile=#<File:/tmp/RackMultipart20140529-10415-3poixl>, @original_filename="friends1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>""}, "commit"=>"Save Resource"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+WARNING: Can't mass-assign protected attributes for Resource: tag_list, pic
+	app/controllers/resources_controller.rb:28:in `create'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered resources/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:28:46 +0530
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-29 19:29:09 +0530
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "resources"
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:29:09 +0530
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-05-29 19:29:10 +0530
+Processing by TagsController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.5ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered tags/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 21.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:29:10 +0530
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-29 19:29:11 +0530
+Processing by ResourcesController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:29:12 +0530
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-29 19:31:06 +0530
+Processing by ResourcesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:31:06 +0530
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-05-29 19:31:15 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x00000004603048 @tempfile=#<File:/tmp/RackMultipart20140529-10415-zokqep>, @original_filename="friends.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>""}, "commit"=>"Save Resource"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+WARNING: Can't mass-assign protected attributes for Resource: tag_list, pic
+	app/controllers/resources_controller.rb:28:in `create'
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  Rendered resources/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 6.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:31:15 +0530
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-05-29 19:34:04 +0530
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from <class:Resource> at /home/priya/gallery/app/models/resource.rb:8)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "resources"
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  Rendered resources/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 35ms (Views: 6.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:34:04 +0530
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-29 19:34:06 +0530
+Processing by ResourcesController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 26ms (Views: 19.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:34:06 +0530
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-05-29 19:34:12 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x007f9f501258f8 @tempfile=#<File:/tmp/RackMultipart20140529-10415-6nej1r>, @original_filename="friends1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>""}, "commit"=>"Save Resource"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes for Resource: tag_list, pic
+	app/controllers/resources_controller.rb:28:in `create'
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (14.6ms)[0m  [1mINSERT INTO "resources" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-05-29 14:04:12.544027"], ["updated_at", "2014-05-29 14:04:12.544027"]]
+  [1m[35m (12.7ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/resources/1
+Completed 302 Found in 39ms (ActiveRecord: 27.9ms)
+
+
+Started GET "/resources/1" for 127.0.0.1 at 2014-05-29 19:34:12 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/show.html.erb within layouts/application (113.7ms)
+Completed 200 OK in 126ms (Views: 115.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:34:12 +0530
+
+
+Started GET "/pics/original/missing.png" for 127.0.0.1 at 2014-05-29 19:34:12 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/original/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.2ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-29 19:34:18 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:34:18 +0530
+
+
+Started GET "/pics/medium/missing.png" for 127.0.0.1 at 2014-05-29 19:34:18 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/medium/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.4ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-29 19:34:19 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:34:19 +0530
+
+
+Started GET "/pics/medium/missing.png" for 127.0.0.1 at 2014-05-29 19:34:19 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/medium/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.4ms)
+
+
+Started GET "/resources/1" for 127.0.0.1 at 2014-05-29 19:34:20 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."resource_id" = $1  [["resource_id", 1]]
+  Rendered resources/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:34:20 +0530
+
+
+Started GET "/pics/original/missing.png" for 127.0.0.1 at 2014-05-29 19:34:20 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/original/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.2ms)
+
+
+Started POST "/resources/1/comments" for 127.0.0.1 at 2014-05-29 19:34:26 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "comment"=>{"body"=>"gg\r\n"}, "commit"=>"Create Comment", "resource_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 5ms
+
+NameError (uninitialized constant CommentsController::Article):
+  app/controllers/comments_controller.rb:3:in `create'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.7ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-29 19:34:35 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:34:35 +0530
+
+
+Started GET "/pics/medium/missing.png" for 127.0.0.1 at 2014-05-29 19:34:35 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/medium/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.5ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-29 19:38:55 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from <class:Resource> at /home/priya/gallery/app/models/resource.rb:8)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 88ms (Views: 52.5ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:38:56 +0530
+
+
+Started GET "/pics/medium/missing.png" for 127.0.0.1 at 2014-05-29 19:38:56 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/medium/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.8ms)
+
+
+Started GET "/resources/1" for 127.0.0.1 at 2014-05-29 19:38:57 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."resource_id" = $1  [["resource_id", 1]]
+  Rendered resources/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 32ms (Views: 22.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:38:57 +0530
+
+
+Started GET "/pics/original/missing.png" for 127.0.0.1 at 2014-05-29 19:38:57 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/original/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (29.0ms)
+
+
+Started POST "/resources/1/comments" for 127.0.0.1 at 2014-05-29 19:39:02 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "comment"=>{"body"=>"PPPP"}, "commit"=>"Create Comment", "resource_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes for Comment: body
+	app/controllers/comments_controller.rb:4:in `create'
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "comments" ("created_at", "resource_id", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-05-29 14:09:02.603989"], ["resource_id", 1], ["updated_at", "2014-05-29 14:09:02.603989"]]
+  [1m[36m (17.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/resources/1
+Completed 302 Found in 37ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/resources/1" for 127.0.0.1 at 2014-05-29 19:39:02 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."resource_id" = $1  [["resource_id", 1]]
+  Rendered resources/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 24ms (Views: 16.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:39:02 +0530
+
+
+Started GET "/pics/original/missing.png" for 127.0.0.1 at 2014-05-29 19:39:02 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/original/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.8ms)
+
+
+Started POST "/resources/1/comments" for 127.0.0.1 at 2014-05-29 19:39:39 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fBtr+J1RozGas9NeRi+1aSQF2u+iK5+4dcJY6CCQzXA=", "comment"=>{"body"=>"FMDSFSD"}, "commit"=>"Create Comment", "resource_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes for Comment: body
+	app/controllers/comments_controller.rb:4:in `create'
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "comments" ("created_at", "resource_id", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-05-29 14:09:39.571013"], ["resource_id", 1], ["updated_at", "2014-05-29 14:09:39.571013"]]
+  [1m[36m (14.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/resources/1
+Completed 302 Found in 62ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/resources/1" for 127.0.0.1 at 2014-05-29 19:39:39 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."resource_id" = $1  [["resource_id", 1]]
+  Rendered resources/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:39:39 +0530
+
+
+Started GET "/pics/original/missing.png" for 127.0.0.1 at 2014-05-29 19:39:39 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/original/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.2ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-29 19:42:21 +0530
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "resources"
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:42:21 +0530
+
+
+Started GET "/pics/medium/missing.png" for 127.0.0.1 at 2014-05-29 19:42:21 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/medium/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.3ms)
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-05-29 19:42:22 +0530
+Processing by ResourcesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:42:22 +0530
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-05-29 19:42:24 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:42:24 +0530
+
+
+Started GET "/pics/medium/missing.png" for 127.0.0.1 at 2014-05-29 19:42:24 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/medium/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.0ms)
+
+
+Started GET "/resources/1" for 127.0.0.1 at 2014-05-29 19:42:26 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."resource_id" = $1  [["resource_id", 1]]
+  Rendered resources/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-05-29 19:42:26 +0530
+
+
+Started GET "/pics/original/missing.png" for 127.0.0.1 at 2014-05-29 19:42:26 +0530
+
+ActionController::RoutingError (No route matches [GET] "/pics/original/missing.png"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.7ms)

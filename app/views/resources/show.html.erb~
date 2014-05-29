@@ -11,15 +11,6 @@
 
 <%= image_tag @resource.pic.url %>
 
-<h2>Comments</h2>
-<% @resource.comments.each do |comment| %>
-  
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
-
 <h2>Add a comment:</h2>
 <%= form_for([@resource, @resource.comments.build]) do |f| %>
   
