@@ -8,8 +8,9 @@ class Resource < ActiveRecord::Base
   has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   has_many :comments
   validates :pic, presence: true
+  attr_accessible :pic
 # for tags
-
+  
   def self.tagged_with(name)
     Tag.find_by_name!(name).resources
   end
