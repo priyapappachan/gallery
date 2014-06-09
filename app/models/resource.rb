@@ -3,12 +3,14 @@
 	
 class Resource < ActiveRecord::Base
   #attr_accessible :tag_list
+ searchable do
   has_many :taggings
   has_many :tags, through: :taggings
   has_attached_file :pic, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   has_many :comments
   validates :pic, presence: true
   attr_accessible :pic
+ end
 # for tags
   
   def self.tagged_with(name)

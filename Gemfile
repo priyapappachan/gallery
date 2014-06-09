@@ -15,6 +15,8 @@ gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem "less-rails"
 
+gem 'sunspot_rails'
+gem 'sunspot_solr'
 
 gem 'jquery-rails'
 gem 'turbolinks'
