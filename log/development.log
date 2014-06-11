@@ -43793,3 +43793,868 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-03 20:09:14
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-03 20:09:14 +0530
 DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from block in <class:Resource> at /home/priya/gallery/app/models/resource.rb:9)
   [1m[32mSOLR Request (0.8ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-11 09:12:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (112.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mUser Load (49.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered welcome/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 739ms (Views: 450.1ms | ActiveRecord: 132.1ms | Solr: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+Processing by WelcomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 0.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/mystyle.css?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/resources.css?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/tags.css?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-06-11 09:12:18 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (51.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.6ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-06-11 09:12:21 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from block in <class:Resource> at /home/priya/gallery/app/models/resource.rb:9)
+  [1m[36m (17.5ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (189.0ms)
+Completed 200 OK in 241ms (Views: 160.7ms | ActiveRecord: 32.9ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:21 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:21 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:21 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-06-11 09:12:21 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (24.9ms)
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-06-11 09:12:23 +0530
+Processing by ResourcesController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/new.html.erb within layouts/application (176.5ms)
+Completed 200 OK in 183ms (Views: 180.7ms | ActiveRecord: 0.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:23 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:23 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:23 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-06-11 09:12:23 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.3ms)
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-06-11 09:12:25 +0530
+Processing by TagsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.6ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered tags/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 63ms (Views: 57.3ms | ActiveRecord: 1.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:25 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:25 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:25 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-06-11 09:12:25 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.9ms)
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-06-11 09:12:27 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 1.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:27 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:27 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:27 +0530
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-06-11 09:12:28 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 1.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:28 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:28 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:28 +0530
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-06-11 09:12:29 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 23ms (Views: 16.2ms | ActiveRecord: 2.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:29 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:29 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:29 +0530
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-06-11 09:12:30 +0530
+Processing by ResourcesController#new as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.8ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:30 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:30 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:30 +0530
+
+
+Started GET "/tags" for 127.0.0.1 at 2014-06-11 09:12:31 +0530
+Processing by TagsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered tags/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 11ms (Views: 7.1ms | ActiveRecord: 1.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:31 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:31 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:31 +0530
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-06-11 09:12:37 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 21ms (Views: 15.2ms | ActiveRecord: 1.9ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:37 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:37 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:37 +0530
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-06-11 09:12:38 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 1.5ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:38 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:38 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:12:38 +0530
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-06-11 09:13:02 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 1.4ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 09:13:04 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 09:13:04 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 09:13:04 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-06-11 09:13:04 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.9ms)
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-06-11 13:15:57 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 1.3ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:15:57 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:15:57 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:15:57 +0530
+
+
+Started GET "/assets/images/bookandmovies.jpg" for 127.0.0.1 at 2014-06-11 13:15:57 +0530
+
+ActionController::RoutingError (No route matches [GET] "/assets/images/bookandmovies.jpg"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/methodoverride.rb:21:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/content_length.rb:14:in `call'
+  /usr/lib/ruby/vendor_ruby/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.2ms)
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-06-11 13:36:33 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from block in <class:Resource> at /home/priya/gallery/app/models/resource.rb:9)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 92ms (Views: 57.7ms | ActiveRecord: 7.8ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:36:33 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:36:33 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:36:33 +0530
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-06-11 13:36:35 +0530
+Processing by ResourcesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.3ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:36:35 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:36:35 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:36:35 +0530
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-06-11 13:36:45 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWZbLHFlSufcOy/o6WOrJkaSz6/ZUkeQx5+dI8qSJXw=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x007f164404ff40 @tempfile=#<File:/tmp/RackMultipart20140611-3261-yoqwol>, @original_filename="friends.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>"friends"}, "commit"=>"Save Resource"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mTag Load (0.5ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'friends'  ORDER BY "tags"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (135.6ms)[0m  INSERT INTO "tags" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-11 08:06:45.896301"], ["name", "friends"], ["updated_at", "2014-06-11 08:06:45.896301"]]
+  [1m[36m (20.9ms)[0m  [1mCOMMIT[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]' -auto-orient -resize "300x300>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy20140611-3261-liovti'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy20140611-3261-liovti'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy.jpeg[0]' -auto-orient -resize "100x100>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy20140611-3261-1btowxh'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1gqnidy20140611-3261-1btowxh'
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (49.5ms)[0m  [1mINSERT INTO "resources" ("created_at", "pic_content_type", "pic_file_name", "pic_file_size", "pic_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-06-11 08:06:47.185689"], ["pic_content_type", "image/jpeg"], ["pic_file_name", "friends.jpeg"], ["pic_file_size", 272869], ["pic_updated_at", "2014-06-11 08:06:46.126604"], ["updated_at", "2014-06-11 08:06:47.185689"]]
+  [1m[35mSQL (24.3ms)[0m  INSERT INTO "taggings" ("created_at", "resource_id", "tag_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-11 08:06:47.238339"], ["resource_id", 2], ["tag_id", 1], ["updated_at", "2014-06-11 08:06:47.238339"]]
+  [1m[32mSOLR Request (1.2ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 1687ms
+
+Errno::ECONNREFUSED (Connection refused - {:data=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?><add><doc><field name=\"id\">Resource 2</field><field name=\"type\">Resource</field><field name=\"type\">ActiveRecord::Base</field><field name=\"class_name\">Resource</field></doc></add>", :headers=>{"Content-Type"=>"text/xml"}, :method=>:post, :params=>{:wt=>:ruby}, :query=>"wt=ruby", :path=>"update", :uri=>#<URI::HTTP:0x00000002f844c0 URL:http://localhost:8982/solr/development/update?wt=ruby>, :open_timeout=>nil, :read_timeout=>nil, :retry_503=>nil, :retry_after_limit=>nil}):
+  app/controllers/resources_controller.rb:30:in `create'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-06-11 13:37:12 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWZbLHFlSufcOy/o6WOrJkaSz6/ZUkeQx5+dI8qSJXw=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x000000038047f8 @tempfile=#<File:/tmp/RackMultipart20140611-3261-15gvi4a>, @original_filename="friends.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>"friends"}, "commit"=>"Save Resource"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'friends'  ORDER BY "tags"."id" ASC LIMIT 1[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]' -auto-orient -resize "300x300>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl20140611-3261-p5s2z4'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl20140611-3261-p5s2z4'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl.jpeg[0]' -auto-orient -resize "100x100>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl20140611-3261-ph7gpm'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dr4rbl20140611-3261-ph7gpm'
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "resources" ("created_at", "pic_content_type", "pic_file_name", "pic_file_size", "pic_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-06-11 08:07:12.632347"], ["pic_content_type", "image/jpeg"], ["pic_file_name", "friends.jpeg"], ["pic_file_size", 272869], ["pic_updated_at", "2014-06-11 08:07:12.334529"], ["updated_at", "2014-06-11 08:07:12.632347"]]
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "taggings" ("created_at", "resource_id", "tag_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-11 08:07:12.634822"], ["resource_id", 3], ["tag_id", 1], ["updated_at", "2014-06-11 08:07:12.634822"]]
+  [1m[32mSOLR Request (0.8ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 317ms
+
+Errno::ECONNREFUSED (Connection refused - {:data=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?><add><doc><field name=\"id\">Resource 3</field><field name=\"type\">Resource</field><field name=\"type\">ActiveRecord::Base</field><field name=\"class_name\">Resource</field></doc></add>", :headers=>{"Content-Type"=>"text/xml"}, :method=>:post, :params=>{:wt=>:ruby}, :query=>"wt=ruby", :path=>"update", :uri=>#<URI::HTTP:0x007f16484112d8 URL:http://localhost:8982/solr/development/update?wt=ruby>, :open_timeout=>nil, :read_timeout=>nil, :retry_503=>nil, :retry_after_limit=>nil}):
+  app/controllers/resources_controller.rb:30:in `create'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.4ms)
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-06-11 13:38:09 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from block in <class:Resource> at /home/priya/gallery/app/models/resource.rb:9)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.4ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 89ms (Views: 21.3ms | ActiveRecord: 9.2ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:38:09 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:38:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:38:09 +0530
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-06-11 13:38:11 +0530
+Processing by ResourcesController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered resources/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:38:11 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:38:11 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:38:11 +0530
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-06-11 13:38:21 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWZbLHFlSufcOy/o6WOrJkaSz6/ZUkeQx5+dI8qSJXw=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x007f164c0439e0 @tempfile=#<File:/tmp/RackMultipart20140611-3261-1a18bu0>, @original_filename="friends.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>"friends"}, "commit"=>"Save Resource"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes for Resource: tag_list
+	app/controllers/resources_controller.rb:28:in `create'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]' -auto-orient -resize "300x300>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte1820140611-3261-vkpzue'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte1820140611-3261-vkpzue'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte18.jpeg[0]' -auto-orient -resize "100x100>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte1820140611-3261-1o70ekw'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1dqte1820140611-3261-1o70ekw'
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("created_at", "pic_content_type", "pic_file_name", "pic_file_size", "pic_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-06-11 08:08:22.079254"], ["pic_content_type", "image/jpeg"], ["pic_file_name", "friends.jpeg"], ["pic_file_size", 272869], ["pic_updated_at", "2014-06-11 08:08:21.750508"], ["updated_at", "2014-06-11 08:08:22.079254"]]
+  [1m[32mSOLR Request (0.9ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 352ms
+
+Errno::ECONNREFUSED (Connection refused - {:data=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?><add><doc><field name=\"id\">Resource 4</field><field name=\"type\">Resource</field><field name=\"type\">ActiveRecord::Base</field><field name=\"class_name\">Resource</field></doc></add>", :headers=>{"Content-Type"=>"text/xml"}, :method=>:post, :params=>{:wt=>:ruby}, :query=>"wt=ruby", :path=>"update", :uri=>#<URI::HTTP:0x0000000445ff48 URL:http://localhost:8982/solr/development/update?wt=ruby>, :open_timeout=>nil, :read_timeout=>nil, :retry_503=>nil, :retry_after_limit=>nil}):
+  app/controllers/resources_controller.rb:30:in `create'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.1ms)
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-06-11 13:38:36 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWZbLHFlSufcOy/o6WOrJkaSz6/ZUkeQx5+dI8qSJXw=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x007f164801e658 @tempfile=#<File:/tmp/RackMultipart20140611-3261-1l5qxl0>, @original_filename="friends.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>"friends"}, "commit"=>"Save Resource"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from block in <class:Resource> at /home/priya/gallery/app/models/resource.rb:9)
+WARNING: Can't mass-assign protected attributes for Resource: tag_list
+	app/controllers/resources_controller.rb:28:in `create'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]' -auto-orient -resize "300x300>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n20140611-3261-jp0zec'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n20140611-3261-jp0zec'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n.jpeg[0]' -auto-orient -resize "100x100>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n20140611-3261-29v3u5'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-1iyap4n20140611-3261-29v3u5'
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "resources" ("created_at", "pic_content_type", "pic_file_name", "pic_file_size", "pic_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-06-11 08:08:36.681645"], ["pic_content_type", "image/jpeg"], ["pic_file_name", "friends.jpeg"], ["pic_file_size", 272869], ["pic_updated_at", "2014-06-11 08:08:36.332156"], ["updated_at", "2014-06-11 08:08:36.681645"]]
+  [1m[32mSOLR Request (0.8ms)[0m  [ path=[1m[1mupdate[0m parameters={} ]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 433ms
+
+Errno::ECONNREFUSED (Connection refused - {:data=>"<?xml version=\"1.0\" encoding=\"UTF-8\"?><add><doc><field name=\"id\">Resource 5</field><field name=\"type\">Resource</field><field name=\"type\">ActiveRecord::Base</field><field name=\"class_name\">Resource</field></doc></add>", :headers=>{"Content-Type"=>"text/xml"}, :method=>:post, :params=>{:wt=>:ruby}, :query=>"wt=ruby", :path=>"update", :uri=>#<URI::HTTP:0x00000003ba99d0 URL:http://localhost:8982/solr/development/update?wt=ruby>, :open_timeout=>nil, :read_timeout=>nil, :retry_503=>nil, :retry_after_limit=>nil}):
+  app/controllers/resources_controller.rb:30:in `create'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/resources/" for 127.0.0.1 at 2014-06-11 13:40:53 +0530
+Processing by ResourcesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+DEPRECATION WARNING: String based terminators are deprecated, please use a lambda. (called from <class:Resource> at /home/priya/gallery/app/models/resource.rb:9)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "resources"
+  [1m[36mResource Load (0.2ms)[0m  [1mSELECT "resources".* FROM "resources"[0m
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 1]]
+  Rendered resources/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 99ms (Views: 30.2ms | ActiveRecord: 9.0ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:40:53 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:40:53 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:40:53 +0530
+
+
+Started GET "/resources/new" for 127.0.0.1 at 2014-06-11 13:40:54 +0530
+Processing by ResourcesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered resources/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:40:54 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:40:54 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:40:54 +0530
+
+
+Started POST "/resources/" for 127.0.0.1 at 2014-06-11 13:41:06 +0530
+Processing by ResourcesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWZbLHFlSufcOy/o6WOrJkaSz6/ZUkeQx5+dI8qSJXw=", "resource"=>{"pic"=>#<ActionDispatch::Http::UploadedFile:0x007f16440883b8 @tempfile=#<File:/tmp/RackMultipart20140611-3261-173r42i>, @original_filename="friends.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"resource[pic]\"; filename=\"friends.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "tag_list"=>"friends"}, "commit"=>"Save Resource"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'friends'  ORDER BY "tags"."id" ASC LIMIT 1[0m
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]' -auto-orient -resize "300x300>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg20140611-3261-17nziir'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg20140611-3261-17nziir'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]'
+Command :: identify -format %m '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]'
+Command :: convert '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg.jpeg[0]' -auto-orient -resize "100x100>" '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg20140611-3261-1a4k4x3'
+Command :: file -b --mime '/tmp/28f20a02bf8a021fab4fcec48afb584e20140611-3261-94iksg20140611-3261-1a4k4x3'
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "resources" ("created_at", "pic_content_type", "pic_file_name", "pic_file_size", "pic_updated_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-06-11 08:11:06.782065"], ["pic_content_type", "image/jpeg"], ["pic_file_name", "friends.jpeg"], ["pic_file_size", 272869], ["pic_updated_at", "2014-06-11 08:11:06.448015"], ["updated_at", "2014-06-11 08:11:06.782065"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "taggings" ("created_at", "resource_id", "tag_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-11 08:11:06.784168"], ["resource_id", 6], ["tag_id", 1], ["updated_at", "2014-06-11 08:11:06.784168"]]
+  [1m[36m (14.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/resources/6
+Completed 302 Found in 378ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/resources/6" for 127.0.0.1 at 2014-06-11 13:41:06 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.4ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", "6"]]
+  [1m[36mTag Load (0.5ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 6]]
+  [1m[35mComment Load (18.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."resource_id" = $1  [["resource_id", 6]]
+  Rendered resources/show.html.erb within layouts/application (59.5ms)
+Completed 200 OK in 116ms (Views: 87.3ms | ActiveRecord: 22.6ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:07 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:07 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:07 +0530
+
+
+Started GET "/tags/friends" for 127.0.0.1 at 2014-06-11 13:41:09 +0530
+Processing by ResourcesController#index as HTML
+  Parameters: {"tag"=>"friends"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mTag Load (0.4ms)[0m  SELECT  "tags".* FROM "tags"  WHERE "tags"."name" = 'friends' LIMIT 1
+  [1m[36mResource Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "resources" INNER JOIN "taggings" ON "resources"."id" = "taggings"."resource_id" WHERE "taggings"."tag_id" = $1 LIMIT 1[0m  [["tag_id", 1]]
+  [1m[35mResource Load (0.2ms)[0m  SELECT "resources".* FROM "resources" INNER JOIN "taggings" ON "resources"."id" = "taggings"."resource_id" WHERE "taggings"."tag_id" = $1  [["tag_id", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 6]]
+  Rendered resources/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 22ms (Views: 12.3ms | ActiveRecord: 1.7ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:09 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:09 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:09 +0530
+
+
+Started GET "/resources" for 127.0.0.1 at 2014-06-11 13:41:11 +0530
+Processing by ResourcesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "resources"[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT "resources".* FROM "resources"
+  [1m[36mTag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1[0m  [["resource_id", 1]]
+  [1m[35mTag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 6]]
+  Rendered resources/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 1.9ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:11 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:11 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:11 +0530
+
+
+Started GET "/resources/6" for 127.0.0.1 at 2014-06-11 13:41:13 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 6]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."resource_id" = $1[0m  [["resource_id", 6]]
+  Rendered resources/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 16ms (Views: 9.5ms | ActiveRecord: 1.5ms | Solr: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:13 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:13 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:13 +0530
+
+
+Started POST "/resources/6/comments" for 127.0.0.1 at 2014-06-11 13:41:33 +0530
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWZbLHFlSufcOy/o6WOrJkaSz6/ZUkeQx5+dI8qSJXw=", "comment"=>{"body"=>"wow"}, "commit"=>"Create Comment", "resource_id"=>"6"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mResource Load (0.3ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (41.2ms)[0m  [1mINSERT INTO "comments" ("body", "created_at", "resource_id", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "wow"], ["created_at", "2014-06-11 08:11:33.813148"], ["resource_id", 6], ["updated_at", "2014-06-11 08:11:33.813148"]]
+  [1m[35m (19.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/resources/6
+Completed 302 Found in 71ms (ActiveRecord: 61.7ms)
+
+
+Started GET "/resources/6" for 127.0.0.1 at 2014-06-11 13:41:33 +0530
+Processing by ResourcesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mResource Load (0.3ms)[0m  SELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "resources".* FROM "resources"  WHERE "resources"."id" = $1 LIMIT 1[0m  [["id", "6"]]
+  [1m[35mTag Load (0.4ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."resource_id" = $1  [["resource_id", 6]]
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."resource_id" = $1[0m  [["resource_id", 6]]
+  Rendered resources/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 24ms (Views: 16.4ms | ActiveRecord: 1.8ms | Solr: 0.0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:33 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:33 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-11 13:41:33 +0530
