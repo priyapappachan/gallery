@@ -13,13 +13,11 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< HEAD
+
 *= require_self
 *= require twitter/bootstrap
 *= require bootstrap_and_overrides
 *= require bootstrap/colorpicker
 *= require bootstrap/datepicker
 *= require bootstrap/image-gallery
-=======
-*= require twitter/bootstrap
->>>>>>> a5cf997ebe55804986943c4295f443dd635a5183
+
